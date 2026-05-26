@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Browser Pokemon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="poke-ball">⚫</span> Pokédex
+                </h1>
+                <p class="subtitle">Jelajahi dunia Pokemon</p>
+            </div>
+        </header>
+
+        <!-- Search dan Filter Section -->
+        <section class="controls-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Cari Pokemon (nama/nomor)..."
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+
+            <div class="filter-section">
+                <label for="typeFilter">Filter Tipe:</label>
+                <select id="typeFilter" class="filter-select">
+                    <option value="">Semua Tipe</option>
+                </select>
+            </div>
+
+            <div class="sort-section">
+                <label for="sortSelect">Urutkan:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="default">Default (Nomor Pokédex)</option>
+                    <option value="name-asc">Nama (A-Z)</option>
+                    <option value="name-desc">Nama (Z-A)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-item">
+                <p id="totalPokemon" class="stat-text">Total: -</p>
+            </div>
+            <div class="stat-item">
+                <p id="loadingStatus" class="stat-text">Loading...</p>
+            </div>
+        </section>
+
+        <!-- Pokemon Grid -->
+        <section class="pokemon-grid" id="pokemonGrid">
+            <!-- Akan diisi oleh JavaScript -->
+        </section>
+
+        <!-- Pokemon Detail Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalBody" class="modal-body">
+                    <!-- Detail Pokemon akan ditampilkan di sini -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="load-more-btn">Muat Lebih Banyak</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
